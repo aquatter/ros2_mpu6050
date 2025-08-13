@@ -37,6 +37,7 @@
 #include <string>
 #include <memory>
 #include <cstdint>
+#include <array>
 
 class Mpu6050 {
 public:
@@ -250,8 +251,8 @@ private:
 
     std::uint8_t u8FsSelCurrentVal = static_cast<std::uint8_t>(FSR_250);
     std::uint8_t u8AfsSelCurrentVal = static_cast<std::uint8_t>(AFSR_2);
-    const std::array<double, 4> aFsSelVal {131, 65.5, 32.8, 16.4};
-    const std::array<double, 4> aAfsSelVal {16384, 8192, 4096, 2048};
+    const std::array<double, 4> aFsSelVal {{131, 65.5, 32.8, 16.4}};
+    const std::array<double, 4> aAfsSelVal {{16384, 8192, 4096, 2048}};
 
     /**
      * @brief MPU6050 I2C slave address when pin AD0 is low
